@@ -1,0 +1,42 @@
+Make the thing gallery thing start from Project 1
+Play the loading screen until the js and or the css is finished loading (If possible)
+Plz fix the settings and dark mode thing
+
+
+That's it 👍
+Thanks.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PS. I still suck at coding 

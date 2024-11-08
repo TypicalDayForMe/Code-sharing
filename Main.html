@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Gallery with Navbar and Settings</title>
+    <link rel="stylesheet" href="Main.css">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-container">
+        <div class="loading-bar"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="circle-menu">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#gallery" class="nav-link">Gallery</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <div class="settings-dropdown">
+                <button class="settings-btn" onclick="toggleDropdown()">Settings</button>
+                <div id="dropdown-content" class="dropdown-content">
+                    <label>
+                        <input type="checkbox" id="dark-mode-toggle" onchange="toggleDarkMode()"> Dark Mode
+                    </label>
+                    <label for="language-select">Language</label>
+                    <select id="language-select" onchange="changeLanguage()">
+                        <option value="en">English</option>
+                        <option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div id="main-content" class="gallery-container" style="display: none;">
+        <!-- Gallery items -->
+        <div class="gallery-item" onclick="openPage('page1.html')">
+            <img src="images/725250.jpg" alt="Project 1">
+            <div class="gallery-text">Project 1</div>
+        </div>
+        <div class="gallery-item" onclick="openPage('page2.html')">
+            <img src="images/767264.png" alt="Project 2">
+            <div class="gallery-text">Project 2</div>
+        </div>
+        <div class="gallery-item" onclick="openPage('page3.html')">
+            <img src="images/806997.png" alt="Project 3">
+            <div class="gallery-text">Project 3</div>
+        </div>
+        <div class="gallery-item" onclick="openPage('page4.html')">
+            <img src="images/pexels-aleksandar-pasaric-325185.jpg" alt="Project 4">
+            <div class="gallery-text">Project 4</div>
+        </div>
+        <div class="gallery-item" onclick="openPage('page5.html')">
+            <img src="images/pexels-dmitry-demidov-3784221.jpg" alt="Project 5">
+            <div class="gallery-text">Project 5</div>
+        </div>
+        <div class="gallery-item" onclick="openPage('page6.html')">
+            <img src="images/pexels-erik-schereder-9955404.jpg" alt="Project 6">
+            <div class="gallery-text">Project 6</div>
+        </div>
+        <div class="gallery-item" onclick="openPage('page7.html')">
+            <img src="images/pexels-mohamed-almari-1485894.jpg" alt="Project 7">
+            <div class="gallery-text">Project 7</div>
+        </div>
+        <div class="gallery-item" onclick="openPage('page8.html')">
+            <img src="images/pexels-pixabay-33545.jpg" alt="Project 8">
+            <div class="gallery-text">Project 8</div>
+        </div>
+        <div class="gallery-item" onclick="openPage('page9.html')">
+            <img src="images/pexels-pixabay-36717.jpg" alt="Project 9">
+            <div class="gallery-text">Project 9</div>
+        </div>
+        <div class="gallery-item" onclick="openPage('page10.html')">
+            <img src="images/pexels-pixabay-36762.jpg" alt="Project 10">
+            <div class="gallery-text">Project 10</div>
+        </div>
+        <div class="gallery-item" onclick="openPage('page11.html')">
+            <img src="images/pexels-sebastian-arie-voortman-189349.jpg" alt="Project 11">
+            <div class="gallery-text">Project 11</div>
+        </div>
+        <div class="gallery-item" onclick="openPage('page12.html')">
+            <img src="images/pexels-stephan-seeber-1261731.jpg" alt="Project 12">
+            <div class="gallery-text">Project 12</div>
+        </div>
+        <div class="gallery-item" onclick="openPage('page13.html')">
+            <img src="images/thumbbig-1323417.jpg" alt="Project 13">
+            <div class="gallery-text">Project 13</div>
+        </div>
+    </div>
+    <script src="Main.js"></script>
+</body>
+</html>

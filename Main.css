@@ -1,0 +1,167 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Loading Screen */
+#loading-screen {
+    display: block;
+    background: #fff;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.loading-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #333;
+    animation: loading 1.4s infinite;
+}
+
+@keyframes loading {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #eee;
+}
+
+.dark-mode .navbar,
+.dark-mode .dropdown-content {
+    background-color: #333;
+    color: #eee;
+}
+
+.dark-mode .gallery-item {
+    background-color: #222;
+}
+
+.dark-mode .nav-link,
+.dark-mode .settings-btn {
+    color: #eee;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.circle-menu {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.settings-dropdown {
+    position: relative;
+}
+
+.settings-btn {
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+    transform: scale(0.95);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+}
+
+.dropdown-content.show {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Gallery Styling */
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.gallery-container {
+    display: flex;
+    gap: 10px;
+    perspective: 10000px;
+    transition: transform 0.6s ease;
+    margin: -1px;
+}
+
+.gallery-item {
+    width: 270px;
+    height: 470px;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    background-color: #ddd;
+    margin: 0;
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Text Overlay on Images */
+.gallery-text {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-text {
+    opacity: 1;
+}
